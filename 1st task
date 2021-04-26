@@ -1,0 +1,7 @@
+create table stock2( stocks1 varchar(10), stocks2 int, stocks3 int, stocks4 int,stocks5 int);
+  create table sales2( sales1 varchar(10), sales2 int, sales3 int, sales4 int,sales5 int);
+  select to_char(sysdate,'dd-mm-yyyy hh24:mi:ss') from dual;
+  select sysdate from dual;
+  select to_char(sysdate,'DD/MM/YYYY') from dual;
+  select to_char(sysdate+1,'day') as "DAY" from dual;
+  select sysdate+10 from dual;
