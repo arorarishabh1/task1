@@ -1,0 +1,46 @@
+create table Employee(
+    EmpFName varchar(20),
+    EmpLastName varchar(20),
+    EmpAge int check(EmpAge between 1 and 50),
+    EmpDesignation varchar(20) check(EmpDesignation in('Sales','Finance','HR','Chef')),
+    EmpId varchar(5) check(EmpId like 'emp%'),
+    empDOB date,
+    constraint emp_pk primary key(EmpId));
+  
+  ************************************************************************************************************************************************************************
+  
+  Q. INSERT 5 EMP
+  
+insert into Employee values(' Rishabh','Arora',22,'Bangalore','Sales','emp60','10-OCT-1999');
+insert into Employee values('Laxmi','oberoi',21,'Delhi',''Finance','emp28','18-MAR-2000');
+insert into Employee values('somya','arora',20,'Punjab',''Chef','emp30','21-DEC-2001');
+insert into Employee values('Gautam','singh',23,'Pune',''Sales','emp05','21-MAY-1995');
+insert into Employee values('Vansh','singh',24,'Mumbai',''HR','emp10','21-JAN-1990');
+
+************************************************************************************************************************************************************************
+update Employee set EmpCity='Bangalore' where EmpId='emp60';
+
+*******************************************************************************************************************************************************
+
+SQL> delete from Employee where EmpId='emp60';
+
+
+SQL> delete from Employee where EmpId='emp60';
+
+
+
+SQL> commit;
+
+
+
+SQL> delete from Employee;
+
+
+SQL> rollback;
+
+select * from Employee;
+*****************************************************************************************************************************************************************
+display employee  name and dob in(DD-MM-YYYY) fromat
+ select EmpFName||' '||EmpMName||' '||EmpLastName as EmpName, to_char(empDOB,'DD-MM-YYYY') as DOB from Employee;
+ 
+ select substr(EmpFName,1,1)||'.'||substr(EmpMName,1,1)||'.'||EmpLastName as EmpName from Employee;
