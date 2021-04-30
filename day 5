@@ -1,0 +1,101 @@
+public class UpperCase {
+		String hasUpper(String data){
+			char[] ar= data.toCharArray();
+			int f=0;
+			for(int i=0;i<ar.length;i++)
+			{
+				if(ar[i]>='A'&&ar[i]<='Z')
+				{
+					f=1;
+					break;
+				}
+			}
+			if(f==1)
+				return "Yes";
+			else
+				return "No";
+		}
+	public static void main(String[] args) {
+		String test="heLlo";
+		String test1="welcome";
+		UpperCase upperCase=new UpperCase();
+		System.out.println(upperCase.hasUpper(test));
+		System.out.println(upperCase.hasUpper(test1));
+	}
+}
+
+****************************************************************************************************************************************************
+public class Number {
+		String hasNumber(String data){
+			char[] ar= data.toCharArray();
+			int f=0;
+			for(int i=0;i<ar.length;i++)
+			{
+				if(ar[i]>='0'&&ar[i]<='9')
+				{
+					f=1;
+					break;
+				}
+			}
+			if(f==1)
+				return "Yes";
+			else
+				return "No";
+		}
+	public static void main(String[] args) {
+		String test="heLlo1";
+		String test1="welcome";
+		Number number=new Number();
+    }
+    }
+******************************************************************************************************************************************************
+
+
+public class OnlyCaps {
+	boolean isCapsOnly(String data){
+		char[] ar= data.toCharArray();
+		int f=0;
+		for(int i=0;i<ar.length;i++)
+		{	
+			if(ar[i]<'A'||ar[i]>'Z')
+			{
+				f=1;
+				break;
+			}
+		}
+		if(f==1)
+			return false;
+		else
+			return true;
+		}
+	public static void main(String[] args) {
+		String test="heLlO";
+		String test1="WELCOME";
+		OnlyCaps onlyCaps=new OnlyCaps();
+		System.out.println(onlyCaps.isCapsOnly(test));
+		System.out.println(onlyCaps.isCapsOnly(test1));
+	}
+}
+
+*******************************************************************************************************************************************************************
+
+
+public class NumCaps {
+	int countCaps(String data){
+		char[] ar= data.toCharArray();
+		int count=0;
+		for(int i=0;i<ar.length;i++)		
+		{	
+			if(ar[i]>='A'&&ar[i]<='Z')
+			{
+				count++;
+			}
+		}
+		return count;
+		}
+		public static void main(String[] args) {
+			String test="heLlO";
+			NumCaps numCaps=new NumCaps();
+			System.out.println(numCaps.countCaps(test));
+		}
+	}
